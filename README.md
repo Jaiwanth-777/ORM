@@ -50,7 +50,7 @@ class BankloanAdmin(admin.ModelAdmin):
 
 ```
 # OUTPUT
-![alt text](<Screenshot (25).png>)
+![alt text](![jvjdvehldij](https://github.com/user-attachments/assets/aee64f44-966d-4152-a856-d0eccdd4c156)
 
   ![WhatsApp Image 2024-12-16 at 10 43 28_bf9c6217](https://github.com/user-attachments/assets/ab4dd201-7a48-40ee-af85-a2ff168a6353)
 
