@@ -1,14 +1,11 @@
 # Ex02 Django ORM Web Application
 # Date:
+# Reg no:212224040125
+# Name:Jaiwanth.M
 # AIM
 To develop a Django application to store and retrieve data from a bank loan database using Object Relational Mapping(ORM).
 
 # ENTITY RELATIONSHIP DIAGRAM
-
-![lhluhyugliug](https://github.com/user-attachments/assets/473dc1b9-f309-4ea4-aeb0-4214089d3228)
-
-
-
 ## DESIGN STEPS
 ## STEP 1:
 Clone the problem from GitHub
@@ -24,35 +21,21 @@ Execute Django admin and create details for 10 books
 
 # PROGRAM
 ```
-admin.py 
-
-
-from django.contrib import admin
-from .models import Bankloan,BankloanAdmin
-admin.site.register(Bankloan,BankloanAdmin)
-
 models.py
 
+from django.db import models from django.contrib import admin class loan (models.Model): loan_id=models.IntegerField(primary_key=True) loan_type =models.CharField(max_length=30) loan_amnt =models.FloatField() cust_acntno =models.IntegerField() cust_name=models.CharField(max_length=50)
 
-from django.db import models
+class loanadmin(admin.ModelAdmin): list_display=('loan_id','loan_type','loan_amnt','cust_acntno','cust_name')
+
+admins.py
+
 from django.contrib import admin
-class Bankloan(models.Model):
-  date_of_birth=models.DateField(default=0)
-  fathers_name=models.CharField(max_length=70,default=0)
-  age=models.IntegerField(default=0)
-  customerid=models.IntegerField(primary_key="customerid",default=0) 
-  accountdetails=models.CharField(max_length=70,default=0)
-
-
-class BankloanAdmin(admin.ModelAdmin):
- list_display=('date_of_birth','fathers_name','age','customerid','accountdetails')
-
+from .models import loan,loanadmin
+admin.site.register(loan,loanadmin)
 ```
 # OUTPUT
-![alt text](![jvjdvehldij](https://github.com/user-attachments/assets/aee64f44-966d-4152-a856-d0eccdd4c156)
 
-  ![WhatsApp Image 2024-12-16 at 10 43 28_bf9c6217](https://github.com/user-attachments/assets/ab4dd201-7a48-40ee-af85-a2ff168a6353)
+![438606268-6f69917a-9c0d-404d-a46d-7880455a196f](https://github.com/user-attachments/assets/fd631bb5-7350-425e-bab5-0bd5bdf9ae49)
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
-
